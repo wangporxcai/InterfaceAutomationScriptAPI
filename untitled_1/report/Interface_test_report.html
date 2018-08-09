@@ -7097,7 +7097,7 @@ body.skin-3 {
 <script src="https://cdn.bootcss.com/chosen/1.8.2/chosen.jquery.js"></script>
 <script type="text/javascript">
     var resultData = {
-    "testPass": 8,
+    "testPass": 3,
     "testResult": [
         {
             "className": "TestDoctorsApi",
@@ -7112,20 +7112,9 @@ body.skin-3 {
         },
         {
             "className": "TestDoctorsApi",
-            "methodName": "test_api10",
-            "description": "企业即行订单开票",
-            "spendTime": "0.031 s",
-            "status": "成功",
-            "log": [
-                "{'success': False, 'code': '100', 'text': '登录失效', 'data': None}",
-                ""
-            ]
-        },
-        {
-            "className": "TestDoctorsApi",
             "methodName": "test_api2",
             "description": "身份认证-身份证非法",
-            "spendTime": "0.058 s",
+            "spendTime": "0.025 s",
             "status": "成功",
             "log": [
                 "{'success': False, 'code': '3003', 'text': '身份证已认证，请勿重复认证', 'data': None}",
@@ -7136,101 +7125,19 @@ body.skin-3 {
             "className": "TestDoctorsApi",
             "methodName": "test_api3",
             "description": "身份认证-身份证已认证",
-            "spendTime": "0.029 s",
+            "spendTime": "0.024 s",
             "status": "成功",
             "log": [
                 "{'success': False, 'code': '3003', 'text': '身份证已认证，请勿重复认证', 'data': None}",
                 ""
             ]
-        },
-        {
-            "className": "TestDoctorsApi",
-            "methodName": "test_api4",
-            "description": "身份认证-未认证身份证认证通过获取驾驶证信息",
-            "spendTime": "0.028 s",
-            "status": "失败",
-            "log": [
-                "{'success': False, 'code': '3003', 'text': '身份证已认证，请勿重复认证', 'data': None}\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\Program Files\\python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
-                "  File \"D:\\Program Files\\python\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
-                "  File \"D:\\Github\\untitled_1\\cases\\test_api.py\", line 124, in test_api4\n    self.assertEquals(self.http.get_value(response, 'code'),'3001')\n",
-                "  File \"D:\\Program Files\\python\\lib\\unittest\\case.py\", line 1320, in deprecated_func\n    return original_func(*args, **kwargs)\n",
-                "  File \"D:\\Program Files\\python\\lib\\unittest\\case.py\", line 829, in assertEqual\n    assertion_func(first, second, msg=msg)\n",
-                "  File \"D:\\Program Files\\python\\lib\\unittest\\case.py\", line 1202, in assertMultiLineEqual\n    self.fail(self._formatMessage(msg, standardMsg))\n",
-                "  File \"D:\\Program Files\\python\\lib\\unittest\\case.py\", line 670, in fail\n    raise self.failureException(msg)\n",
-                "AssertionError: '3003' != '3001'\n- 3003\n?    ^\n+ 3001\n?    ^\n\n"
-            ]
-        },
-        {
-            "className": "TestDoctorsApi",
-            "methodName": "test_api5",
-            "description": "身份认证-身份证与驾驶证不匹配",
-            "spendTime": "0.028 s",
-            "status": "失败",
-            "log": [
-                "{'success': False, 'code': '3002', 'text': '请先进行身份证认证', 'data': None}\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\Program Files\\python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
-                "  File \"D:\\Program Files\\python\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
-                "  File \"D:\\Github\\untitled_1\\cases\\test_api.py\", line 145, in test_api5\n    self.assertEquals(self.http.get_value(response, 'code'),'2001')\n",
-                "  File \"D:\\Program Files\\python\\lib\\unittest\\case.py\", line 1320, in deprecated_func\n    return original_func(*args, **kwargs)\n",
-                "  File \"D:\\Program Files\\python\\lib\\unittest\\case.py\", line 829, in assertEqual\n    assertion_func(first, second, msg=msg)\n",
-                "  File \"D:\\Program Files\\python\\lib\\unittest\\case.py\", line 1202, in assertMultiLineEqual\n    self.fail(self._formatMessage(msg, standardMsg))\n",
-                "  File \"D:\\Program Files\\python\\lib\\unittest\\case.py\", line 670, in fail\n    raise self.failureException(msg)\n",
-                "AssertionError: '3002' != '2001'\n- 3002\n+ 2001\n\n"
-            ]
-        },
-        {
-            "className": "TestDoctorsApi",
-            "methodName": "test_api6",
-            "description": "身份认证-身份已认证驾驶证信息不存在",
-            "spendTime": "0.024 s",
-            "status": "成功",
-            "log": [
-                "{'success': False, 'code': '3004', 'text': '驾驶证已认证，请勿重复认证', 'data': None}",
-                ""
-            ]
-        },
-        {
-            "className": "TestDoctorsApi",
-            "methodName": "test_api7",
-            "description": "身份认证-驾驶证认证",
-            "spendTime": "0.027 s",
-            "status": "成功",
-            "log": [
-                "{'success': False, 'code': '3004', 'text': '驾驶证已认证，请勿重复认证', 'data': None}",
-                ""
-            ]
-        },
-        {
-            "className": "TestDoctorsApi",
-            "methodName": "test_api8",
-            "description": "订单",
-            "spendTime": "0.072 s",
-            "status": "成功",
-            "log": [
-                "{'success': True, 'code': None, 'text': None, 'data': {'csqStrength': 0, 'publishTime': None, 'distance': 12886.131406472323, 'isrelay': True, 'lon': 120.18146568832276, 'publishAddress': None, 'endurance': 0.0, 'ischarging': 0, 'limitMessage': None, 'publishId': None, 'relayLon': 0.0, 'isLimit': False, 'power': 0, 'relayLat': 0.0, 'ableDeposit': 0.0, 'lat': 30.18490989510236, 'publishStatus': 0, 'status': 5, 'limitUrl': None}}",
-                ""
-            ]
-        },
-        {
-            "className": "TestDoctorsApi",
-            "methodName": "test_api9",
-            "description": "企业即行卷开票",
-            "spendTime": "0.029 s",
-            "status": "成功",
-            "log": [
-                "{'success': False, 'code': '100', 'text': '登录失效', 'data': None}",
-                ""
-            ]
         }
     ],
     "testName": "接口测试",
-    "testAll": 10,
-    "testFail": 2,
-    "beginTime": "2018-08-09 16:39:04",
-    "totalTime": "1s",
+    "testAll": 3,
+    "testFail": 0,
+    "beginTime": "2018-08-09 16:40:39",
+    "totalTime": "0s",
     "testSkip": 0,
     "testError": 0
 };
