@@ -96,32 +96,32 @@ class TestDoctorsApi(unittest.TestCase):
         response = self.http.post(url=url, json=data, headers=headers)
         print(response)
 
-    # def test_api4(self):
-    #     '''身份认证-未认证身份证认证通过获取驾驶证信息'''
-    #     url = 'http://121.199.23.170:8083/carshare/member/authIdAndDriver'
-    #
-    #     data = {
-    #     "mobile":"13588293143",
-    #     "aCertifyNum":"330051199404138235",
-    #     "aRealName":"傅云波",
-    #     "aSex":"2",
-    #     "certifyType":"1",
-    #     "certifyImg":"test",
-    #     "certifyImgPositive":"test",
-    #     "nation":"男",
-    #     "birthday":"19901002",
-    #     "addr":"xxx",
-    #     "idCardEndTime":"20100221-20200221",
-    #     "pubOrg":"太康县公安局",
-    #     "orderNo":"test123456789test"
-    #         }
-    #     headers= {
-    #
-    #         'Content-Type':'application/json'
-    #         }
-    #     response = self.http.post(url=url, json=data, headers=headers)
-    #     print(response)
-    #     self.assertEquals(self.http.get_value(response, 'code'),'3001')
+    def test_api4(self):
+        '''身份认证-未认证身份证认证通过获取驾驶证信息'''
+        url = 'http://121.199.23.170:8083/carshare/member/authIdAndDriver'
+
+        data = {
+        "mobile":"13588293143",
+        "aCertifyNum":"330051199404138235",
+        "aRealName":"傅云波",
+        "aSex":"2",
+        "certifyType":"1",
+        "certifyImg":"test",
+        "certifyImgPositive":"test",
+        "nation":"男",
+        "birthday":"19901002",
+        "addr":"xxx",
+        "idCardEndTime":"20100221-20200221",
+        "pubOrg":"太康县公安局",
+        "orderNo":"test123456789test"
+            }
+        headers= {
+
+            'Content-Type':'application/json'
+            }
+        response = self.http.post(url=url, json=data, headers=headers)
+        print(response)
+        self.assertEquals(self.http.get_value(response, 'code'),'3001')
 
     def test_api5(self):
         '''身份认证-身份证与驾驶证不匹配'''
@@ -281,5 +281,5 @@ class TestDoctorsApi(unittest.TestCase):
 
         response = self.http.post(url=url,json=data,headers=headers)
         print(response)
-    def test_api12(self):
-        '''个人即行订单开票'''
+    # def test_api12(self):
+    #     '''个人即行订单开票'''
